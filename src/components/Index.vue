@@ -118,7 +118,7 @@ export default {
 
 .el-menu--popup {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 0;
 }
 
@@ -129,7 +129,7 @@ export default {
 }
 
 .el-menu--horizontal .el-menu .el-menu-item:hover {
-  background-color: rgba(14, 79, 143, 0.4);
+  background-color: rgba(14, 79, 143, 0.6);
 }
 
 .el-footer {

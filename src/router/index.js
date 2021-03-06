@@ -20,7 +20,7 @@ const routes = [
         component: () => import('../components/Home.vue')
       },
       {
-        path: '/overview/:route',
+        path: '/overview',
         name: 'Overview',
         component: () => import('../components/Overview.vue'),
         props: true,
@@ -48,19 +48,19 @@ const routes = [
         ]
       },
       {
-        path: '/team/:route',
+        path: '/team',
         name: 'Team',
         component: () => import('../components/Team.vue'),
         props: true
       },
       {
-        path: '/news/:route',
+        path: '/news',
         name: 'News',
         component: () => import('../components/News.vue'),
         props: true
       },
       {
-        path: '/cooperation/:route',
+        path: '/cooperation',
         name: 'Cooperation',
         component: () => import('../components/Cooperation.vue'),
         props: true

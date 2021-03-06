@@ -4,7 +4,7 @@
       <el-col :span="6">
         <el-menu :default-active="$store.state.activePath" router>
           <el-menu-item
-            v-for="(item, index) in menus"
+            v-for="(item, index) in menuList"
             :key="index"
             :index="item.path"
             >{{ item.name }}</el-menu-item
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  props: ['menus']
+  props: ['menuList']
 }
 </script>
 

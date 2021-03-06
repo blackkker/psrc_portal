@@ -1,5 +1,5 @@
 <template>
-  <ListView :menus="menus">
+  <ListView :menuList="menuList">
     <template slot="content">
       <router-view></router-view>
     </template>
@@ -10,10 +10,9 @@
 import ListView from '../views/ListView.vue'
 
 export default {
-  props: ['route'],
   data() {
     return {
-      menus: [
+      menuList: [
         {
           path: '/overview/introduction',
           name: '中心简介'

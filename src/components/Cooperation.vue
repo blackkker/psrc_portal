@@ -6,12 +6,8 @@
 
 <script>
 export default {
-  props: ['route'],
   data() {
     return {}
-  },
-  created() {
-    this.$store.commit('setActivePath', '/cooperation')
   }
 }
 </script>
