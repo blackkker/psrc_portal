@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ route }}
+    综合新闻
   </div>
 </template>
 

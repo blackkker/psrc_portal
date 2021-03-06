@@ -28,9 +28,13 @@
         <el-submenu index="3">
           <template slot="title">团队介绍</template>
           <el-menu-item index="/team/security">信息安全研究中心</el-menu-item>
-          <el-menu-item index="/team/intelligence">人工智能研究中心</el-menu-item>
+          <el-menu-item index="/team/intelligence"
+            >人工智能研究中心</el-menu-item
+          >
           <el-menu-item index="/team/bigdata">大数据研究中心</el-menu-item>
-          <el-menu-item index="/team/manufacture">智能制造研究中心</el-menu-item>
+          <el-menu-item index="/team/manufacture"
+            >智能制造研究中心</el-menu-item
+          >
         </el-submenu>
         <el-submenu index="4">
           <template slot="title">新闻中心</template>
@@ -41,7 +45,9 @@
         <el-submenu index="5">
           <template slot="title">合作交流</template>
           <el-menu-item index="/cooperation/company">企业合作</el-menu-item>
-          <el-menu-item index="/cooperation/international">国际交流</el-menu-item>
+          <el-menu-item index="/cooperation/international"
+            >国际交流</el-menu-item
+          >
         </el-submenu>
       </el-menu>
       <router-view></router-view>

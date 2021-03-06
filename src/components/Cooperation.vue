@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ route }}
+    合作交流
   </div>
 </template>
 

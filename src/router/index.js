@@ -23,7 +23,6 @@ const routes = [
         path: '/overview',
         name: 'Overview',
         component: () => import('../components/Overview.vue'),
-        props: true,
         children: [
           {
             path: '/overview/introduction',
@@ -50,20 +49,17 @@ const routes = [
       {
         path: '/team',
         name: 'Team',
-        component: () => import('../components/Team.vue'),
-        props: true
+        component: () => import('../components/Team.vue')
       },
       {
         path: '/news',
         name: 'News',
-        component: () => import('../components/News.vue'),
-        props: true
+        component: () => import('../components/News.vue')
       },
       {
         path: '/cooperation',
         name: 'Cooperation',
-        component: () => import('../components/Cooperation.vue'),
-        props: true
+        component: () => import('../components/Cooperation.vue')
       }
     ]
   }

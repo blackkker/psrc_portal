@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ route }}
+    团队介绍
   </div>
 </template>
 
