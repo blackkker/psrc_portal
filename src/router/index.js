@@ -49,7 +49,29 @@ const routes = [
       {
         path: '/team',
         name: 'Team',
-        component: () => import('../components/Team.vue')
+        component: () => import('../components/Team.vue'),
+        children: [
+          {
+            path: '/team/security',
+            name: 'Security',
+            component: () => import('../components/Team/Security.vue')
+          },
+          {
+            path: '/team/Intelligence',
+            name: 'Intelligence',
+            component: () => import('../components/Team/Intelligence.vue')
+          },
+          {
+            path: '/team/manufacture',
+            name: 'Manufacture',
+            component: () => import('../components/Team/Manufacture.vue')
+          },
+          {
+            path: '/team/bigdata',
+            name: 'Bigdata',
+            component: () => import('../components/Team/BigData.vue')
+          }
+        ]
       },
       {
         path: '/news',
