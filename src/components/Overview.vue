@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ListView from '../views/ListView.vue'
+import ListView from '../templates/ListView.vue'
 
 export default {
   data() {

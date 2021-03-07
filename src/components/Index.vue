@@ -7,15 +7,20 @@
           fit="scale-down"
           @click.native="$router.push('/home')"
         ></el-image>
-        <el-input placeholder="搜索" suffix-icon="el-icon-search"></el-input>
+        <el-input
+          placeholder="搜索"
+          suffix-icon="el-icon-search"
+          style="width: 20%"
+        ></el-input>
       </div>
     </el-header>
-    <el-main>
+    <el-main style="padding: 0 20% 20px 20%">
       <el-menu
         :default-active="$store.state.activePath"
         mode="horizontal"
         router
         unique-opened
+        style="border: none"
       >
         <el-menu-item index="/home">首页</el-menu-item>
         <el-submenu index="2">
@@ -71,8 +76,7 @@ export default {
   color: #fff;
   background-color: #0e4f8f;
   height: 120px !important;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding: 0 20% 0 20%;
 
   div {
     height: 100%;
@@ -84,21 +88,6 @@ export default {
 
 .el-image:hover {
   cursor: pointer;
-}
-
-.el-input {
-  width: 20%;
-}
-
-.el-main {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-.el-menu {
-  border: none !important;
 }
 
 .el-menu--horizontal > .el-menu-item,

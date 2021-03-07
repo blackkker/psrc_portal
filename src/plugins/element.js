@@ -14,7 +14,11 @@ import {
   CarouselItem,
   Row,
   Col,
-  Card
+  Card,
+  Breadcrumb,
+  BreadcrumbItem,
+  Divider,
+  Link
 } from 'element-ui'
 
 Vue.use(Button)
@@ -32,3 +36,7 @@ Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Col)
 Vue.use(Card)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
+Vue.use(Divider)
+Vue.use(Link)
