@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h2><slot></slot></h2>
+    <h2>{{ article.title }}</h2>
     <div v-show="showInfo" class="info">
-      <span><strong>作者：</strong>{{ author }}</span>
-      <span><strong>发布者：</strong>{{ publisher }}</span>
-      <span><strong>发布时间：</strong>{{ date }}</span>
-      <span><strong>阅读量：</strong>{{ readNum }}</span>
+      <span><strong>作者：</strong>{{ article.author }}</span>
+      <span><strong>发布者：</strong>{{ article.publisher }}</span>
+      <span><strong>发布时间：</strong>{{ article.date }}</span>
+      <span><strong>阅读量：</strong>{{ article.readNum }}</span>
     </div>
-    <div v-html="content" class="content"></div>
-    <div v-show="appendix" class="appendix">
-      <div v-for="(item, index) in appendix" :key="index">
+    <div v-html="article.content" class="content"></div>
+    <div v-show="article.appendix && article.appendix.length" class="appendix">
+      <div v-for="(item, index) in article.appendix" :key="index">
         <el-link icon="el-icon-download" @click="handleClick(item.href)"
           >附件{{ index + 1 }}：{{ item.name }}</el-link
         >
@@ -20,20 +20,45 @@
 
 <script>
 export default {
-  props: [
-    'title',
-    'author',
-    'publisher',
-    'date',
-    'read-num',
-    'content',
-    'appendix',
-    'show-info'
-  ],
+  props: {
+    url: {
+      type: String
+    },
+    'show-info': {
+      default: true,
+      type: Boolean
+    }
+  },
+  data() {
+    return {
+      article: null
+    }
+  },
   methods: {
     handleClick(href) {
       window.open(href, '_blank')
+    },
+    async getArticle() {
+      // const { data: res } = await this.$http.get(this.url)
+      // console.log(res)
+      this.article = {
+        title: '测试标题',
+        author: '作者',
+        publisher: '发布者',
+        date: '2021-03-07',
+        readNum: 100,
+        content: '<strong>测试内容</strong>',
+        appendix: [
+          { name: '测试文件1.docx', href: 'http://www.baidu.com' },
+          { name: '测试文件2.pptx', href: 'http://www.baidu.com' },
+          { name: '测试文件3.xlsx', href: 'http://www.baidu.com' },
+          { name: '测试文件4.zip', href: 'http://www.baidu.com' }
+        ]
+      }
     }
+  },
+  created() {
+    this.getArticle()
   }
 }
 </script>
