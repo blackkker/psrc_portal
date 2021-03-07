@@ -1,6 +1,6 @@
 <template>
-  <Page :items="['中心概况', '中心简介']"
-    >中心简介
+  <Page :items="['中心概况', '中心简介']">
+    中心简介
     <template slot="content">
       <Article url="/introduction" :show-info="true"></Article>
     </template>
@@ -13,9 +13,6 @@ import Article from '../../templates/Article.vue'
 
 export default {
   components: { Page, Article },
-  data() {
-    return {}
-  },
   created() {
     this.$store.commit('setActivePath', '/overview/introduction')
   }

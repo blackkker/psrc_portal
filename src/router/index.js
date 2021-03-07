@@ -43,6 +43,12 @@ const routes = [
             path: '/overview/teacher',
             name: 'Teacher',
             component: () => import('../components/Overview/Teacher.vue')
+          },
+          {
+            path: '/overview/detail/:id',
+            name: 'Teacher',
+            component: () => import('../templates/Detail.vue'),
+            props: true
           }
         ]
       },
