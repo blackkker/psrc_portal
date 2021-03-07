@@ -1,13 +1,13 @@
 <template>
-  <ListView :menuList="menuList">
+  <Module :menuList="menuList">
     <template slot="content">
       <router-view></router-view>
     </template>
-  </ListView>
+  </Module>
 </template>
 
 <script>
-import ListView from '../views/ListView.vue'
+import Module from '../templates/Module.vue'
 
 export default {
   data() {
@@ -33,7 +33,7 @@ export default {
     }
   },
   components: {
-    ListView
+    Module
   }
 }
 </script>
