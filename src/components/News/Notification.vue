@@ -1,9 +1,18 @@
 <template>
-  <div>通知公告</div>
+  <Page :items="['新闻中心', '通知公告']">
+    通知公告
+    <template slot="content">
+      <ArticleList></ArticleList>
+    </template>
+  </Page>
 </template>
 
 <script>
+import Page from '../../templates/Page.vue'
+import ArticleList from '../../templates/ArticleList.vue'
+
 export default {
+  components: { Page, ArticleList },
   created() {
     this.$store.commit('setActivePath', '/news/notification')
   }

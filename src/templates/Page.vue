@@ -1,12 +1,15 @@
 <template>
   <div>
     <div class="header">
-      <h3><i class="el-icon-document el-icon--left"></i><slot></slot></h3>
+      <h3>
+        <i class="el-icon-document el-icon--left"></i>
+        <slot></slot>
+      </h3>
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item v-for="(item, index) in items" :key="index">{{
-          item
-        }}</el-breadcrumb-item>
+        <el-breadcrumb-item v-for="(item, index) in items" :key="index">
+          {{ item }}
+        </el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <el-divider></el-divider>

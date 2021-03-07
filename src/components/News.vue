@@ -1,22 +1,22 @@
 <template>
   <Module :menuList="menuList">
     <template slot="content">
-      <ArticleList></ArticleList>
+      <router-view></router-view>
     </template>
   </Module>
 </template>
 
 <script>
 import Module from '../templates/Module.vue'
-import ArticleList from '../templates/ArticleList.vue'
+// import ArticleList from '../templates/ArticleList.vue'
 export default {
-  components: { ArticleList, Module },
+  components: { Module },
   data() {
     return {
       menuList: [
         {
           path: '/news/general',
-          name: '通知公告'
+          name: '综合新闻'
         },
         {
           path: '/news/notification',
@@ -24,7 +24,7 @@ export default {
         },
         {
           path: '/news/research',
-          name: '通知公告'
+          name: '科研情况'
         }
       ]
     }
