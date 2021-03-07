@@ -1,16 +1,16 @@
 <template>
-  <ListView :menuList="menuList">
+  <Module :menuList="menuList">
     <template slot="content">
       <ArticleList></ArticleList>
     </template>
-  </ListView>
+  </Module>
 </template>
 
 <script>
-import ListView from '../templates/Module.vue'
+import Module from '../templates/Module.vue'
 import ArticleList from '../templates/ArticleList.vue'
 export default {
-  components: { ArticleList, ListView },
+  components: { ArticleList, Module },
   data() {
     return {
       menuList: [

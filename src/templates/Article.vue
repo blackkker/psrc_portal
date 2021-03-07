@@ -2,17 +2,29 @@
   <div>
     <h2>{{ article.title }}</h2>
     <div v-show="showInfo" class="info">
-      <span><strong>作者：</strong>{{ article.author }}</span>
-      <span><strong>发布者：</strong>{{ article.publisher }}</span>
-      <span><strong>发布时间：</strong>{{ article.date }}</span>
-      <span><strong>阅读量：</strong>{{ article.readNum }}</span>
+      <span>
+        <strong>作者：</strong>
+        {{ article.author }}
+      </span>
+      <span>
+        <strong>发布者：</strong>
+        {{ article.publisher }}
+      </span>
+      <span>
+        <strong>发布时间：</strong>
+        {{ article.date }}
+      </span>
+      <span>
+        <strong>阅读量：</strong>
+        {{ article.readNum }}
+      </span>
     </div>
-    <div v-html="article.content" class="content"></div>
+    <div v-html="article.content"></div>
     <div v-show="article.appendix && article.appendix.length" class="appendix">
       <div v-for="(item, index) in article.appendix" :key="index">
-        <el-link icon="el-icon-download" @click="handleClick(item.href)"
-          >附件{{ index + 1 }}：{{ item.name }}</el-link
-        >
+        <el-link icon="el-icon-download" @click="handleClick(item.href)">
+          附件{{ index + 1 }}：{{ item.name }}
+        </el-link>
       </div>
     </div>
   </div>
@@ -74,6 +86,7 @@ h2 {
   text-align: end;
   background-color: #f5f5f5;
   padding: 5px;
+  margin-bottom: 10px;
 
   span {
     margin-left: 10px;
@@ -81,13 +94,9 @@ h2 {
   }
 }
 
-.content {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .appendix {
   background-color: #f5f5f5;
+  margin-top: 10px;
   padding: 5px;
 }
 </style>
