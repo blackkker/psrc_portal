@@ -1,11 +1,11 @@
 <template>
-  <div>科研进展</div>
+  <div>综合新闻</div>
 </template>
 
 <script>
 export default {
   created() {
-    this.$store.commit('setActivePath', '/news/research')
+    this.$store.commit('setActivePath', '/news/general')
   }
 }
 </script>

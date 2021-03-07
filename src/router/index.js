@@ -54,7 +54,24 @@ const routes = [
       {
         path: '/news',
         name: 'News',
-        component: () => import('../components/News.vue')
+        component: () => import('../components/News.vue'),
+        children: [
+          {
+            path: '/news/general',
+            name: 'General',
+            component: () => import('../components/News/General.vue')
+          },
+          {
+            path: '/news/notification',
+            name: 'Notification',
+            component: () => import('../components/News/Notification.vue')
+          },
+          {
+            path: '/news/research',
+            name: 'Research',
+            component: () => import('../components/News/Research.vue')
+          }
+        ]
       },
       {
         path: '/cooperation',
