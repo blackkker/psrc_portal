@@ -1,15 +1,16 @@
 <template>
   <ListView :menuList="menuList">
     <template slot="content">
-      <router-view></router-view>
+      <ArticleList></ArticleList>
     </template>
   </ListView>
 </template>
 
 <script>
-import ListView from '../views/ListView.vue'
-
+import ListView from '../templates/Module.vue'
+import ArticleList from '../templates/ArticleList.vue'
 export default {
+  components: { ArticleList, ListView },
   data() {
     return {
       menuList: [
@@ -27,9 +28,6 @@ export default {
         }
       ]
     }
-  },
-  components: {
-    ListView
   }
 }
 </script>
