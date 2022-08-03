@@ -2,7 +2,7 @@
 
 #### Description
 
-公共安全中心的门户网站项目
+公共安全中心的门户网站前端
 
 ## Project setup
 
